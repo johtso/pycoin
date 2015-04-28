@@ -192,8 +192,8 @@ def wif_to_tuple_of_secret_exponent_compressed(wif, allowable_wif_prefixes=[b'\x
     Not that it matters, since we can use the secret exponent to generate both the compressed
     and uncompressed Bitcoin address."""
     actual_prefix, secret_exponent, is_compressed = wif_to_tuple_of_prefix_secret_exponent_compressed(wif)
-    if actual_prefix not in allowable_wif_prefixes:
-        raise EncodingError("unexpected first byte of WIF %s" % wif)
+    # if actual_prefix not in allowable_wif_prefixes:
+    #     raise EncodingError("unexpected first byte of WIF %s" % wif)
     return secret_exponent, is_compressed
 
 
